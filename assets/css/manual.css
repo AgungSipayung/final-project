@@ -1,81 +1,34 @@
 
-
-
-/* Layout */
-#wrapper:before, #wrapper:after {
-    height: 100vh;
-    width: 5px;
-    position: fixed;
-    content: '';
-    z-index: 999;
-    top: 0; }
-  
-  #wrapper:before {
-    left: 0; }
-  
-  #wrapper:after {
-    right: 0; }
-
-.vertical-align-wrap {
+/* user logo */
+.dropdown {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  display: table; }
-
-.vertical-align-middle {
-  display: table-cell;
-  vertical-align: middle; }
-
-  /* Authentication forms */
-.auth-main::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 400px;
-  height: 100%;
-  z-index: -1;
-  background: #d17905; }
-  @media screen and (max-width: 640px) {
-    .auth-main::before {
-      width: 100%; } }
-
-.auth-main:after {
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -2;
-  background: url(../../../assets/images/auth_bg.jpg) no-repeat top left fixed; }
-
-  .auth-box{
-    display: block;
+  height: 16px;
+  left: 78px;
+  top: 10px;
+      
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+      
+  color: #000000;
   }
 
-    /* images */
-.auth-box {
-  width: 380px;
-  height: auto;
-  margin-left: 130px; }
-  .auth-box .top img {
-    width: 250px; }
-  .auth-box .form-auth-small .element-left {
-    float: left; }
-  .auth-box .form-auth-small .element-right {
-    float: right; }
-  .auth-box .lead {
-    font-size: 18px; }
-  .auth-box .helper-text {
-    color: #9A9A9A; }
-  .auth-box .btn-signin-social {
-    padding: 10px 22px;
-    width: 100%;
-    background-color: #ffffff;
-    border-color: #f0f0f0; }
-    .auth-box .btn-signin-social:hover, .auth-box .btn-signin-social:focus {
-      background-color: #f0f0f0; }
-    .auth-box .btn-signin-social i {
-      font-size: 16px;
-      margin: 5px; }
+  .buttonhover {
+    background-color: white; 
+    color: rgb(119, 119, 119); 
+    border: 1px solid rgb(156, 156, 156);
+  }
+  
+  .buttonhover:hover {
+    background-color: rgb(156, 156, 156);
+    color: white;
+  }
+
+  .texthover {
+    color: rgb(119, 119, 119);
+  }
+  
+  .texthover:hover {
+    color: rgb(23, 195, 218);
+  }

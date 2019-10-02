@@ -1,9 +1,15 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<head>
+<title>:: CAKI :: Home</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="description" content="CAKI beta Design 1.0.0">
+<meta name="author" content="CAKI, Caki Indonesia">
+
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -11,59 +17,246 @@
     <link rel="stylesheet" href="assets/css/manual.css">
     <title>Final-project</title>
   </head>
-  <body style="background-color: rgb(222, 226, 222);">
+  <body style="background-color: #F4F7F6;">
     <!-- Overlay For Sidebars -->
 
-<div id="wrapper">
-    <nav class="navbar navbar-expand-sm bg-light navbar-light">
-      <div class="container-fluid">
-          <!-- Brand/logo -->
-            <div class="col-sm-2">
-              <a class="navbar-brand" href="#">
-                <img src="images/logo.svg" alt="CAKI LOGO" style="width:85px;">
-              </a>
-            </div>
+    <nav class="navbar navbar-expand-sm bg-white">
+        <div class="container-fluid">
+            <!-- Brand/logo -->
+              <div class="col-sm-2">
+                <a class="navbar-brand" href="#">
+                  <img src="images/logo.svg" alt="CAKI LOGO" style="width:80px;">
+                </a>
+              </div>
 
-            <div class="col-sm-8">
-              <form class="form-inline" action="/action_page.php">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                <button class="btn btn-success" type="submit">Search</button>
-              </form>
-            </div>
-            <div class="col-sm-2">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href=""><i class='far fa-calendar-alt' style="font-size:20px; color:rgb(131, 131, 131); margin-right: 27px"></i></a>
-                    </li>  
-                    <li>
-                        <a href=""><i class='far fa-envelope' style='font-size:20px; color:rgb(131, 131, 131); margin-right: 27px'></i></a>
-                    </li>
-                    <li>
-                        <a href=""><i class='far fa-bell' style='font-size:20px; color:rgb(131, 131, 131); margin-right: 27px'></i></a>
-                    </li>
-                    <li>
-                      <a href=""><i class='fas fa-sign-in-alt' style='font-size:20px; color:rgb(131, 131, 131); margin-right: 27px'></i></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-      </nav>
-        
-    
-    <div class="container-fluid" style="margin-top:90px">
-      <div class="row">
-          <div class="col-sm-2" title="sidenav">
-              <ul>
-                <li>
-                  <a href=""><i class='fas fa-sign-in-alt' style='font-size:20px; color:rgb(131, 131, 131); margin-right: 27px'></i></a>
-                </li>
-              </ul>
+              <div class="col-sm-8">
+                <form class="form-inline" action="#/action_page.php">
+                  <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                  <button class="btn btn-light" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+              </div>
+
+              <div class="col-sm-2">
+                  <ul class="nav navbar-nav">
+                      <li>
+                          <a href=""><i class='far fa-calendar-alt' style="font-size:20px; color:rgb(131, 131, 131); margin-right: 27px"></i></a>
+                      </li>  
+                      <li>
+                          <a href=""><i class='far fa-envelope' style='font-size:20px; color:rgb(131, 131, 131); margin-right: 27px'></i></a>
+                      </li>
+                      <li>
+                          <a href=""><i class='far fa-bell' style='font-size:20px; color:rgb(131, 131, 131); margin-right: 27px'></i></a>
+                      </li>
+                      <li>
+                          <a href=""><i class='fas fa-sign-in-alt' style='font-size:20px; color:rgb(131, 131, 131); margin-right: 27px'></i></a>
+                      </li>
+                  </ul>
+              </div>
           </div>
-      </div>
-    </div>
+    </nav>
+        
+    <!-- profil user -->
+    <div class="container-fluid" style="margin-top:15px">
+        <div class="row">
+            <div class="col-sm-2">
+              <img src="images/user.png" class="rounded-circle" alt="Cinque Terre" width="48" height="48">
+              <div class="dropdown">
+                  <span>Welcome,</span>
+                  <br>
+                  <a class="dropdown-toggle user-name" data-toggle="dropdown"><strong style="color: rgb(80, 80, 80)">Sohui Park</strong></a>
+                  <div class="dropdown-menu" style="background-color: rgb(22, 22, 22)">
+                    <a class="dropdown-item" style="color: rgb(173, 173, 173)" href="#"><i class="far fa-envelope-open"></i> Messages</a>
+                    <a class="dropdown-item" style="color: rgb(173, 173, 173)" href="#"><i class="fas fa-cog"></i> Settings</a>
+                    <div class="dropdown-divider" style="margin-left: 15px; margin-right: 15px;"></div>
+                    <a class="dropdown-item" style="color: rgb(173, 173, 173)" href="#"><i class="fas fa-power-off"></i> Logout</a>
+                  </div>
+              </div> 
+              
+              <div class="dropdown-divider"></div>
+              <!-- nav tabs Sidebar-->
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a style="background-color: #F4F7F6;" class="nav-link active text-info font-weight-bolder" href="#menu">MENU</a>
+                      </li>
+                </ul>
 
+                <div id="accordion">
+                    <div class="card">
+                      <div class="card-header">
+                        <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                          <span style="margin-right: 15px"><i class="fas fa-home text-info"></i></span><span class="text-dark">  Home </span>
+                        </a>
+                      </div>
+                      <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                        <div class="card-body">
+                          <a class="text-decoration-none text-dark" href="index.html"><small class="font-weight-bold"><span style="margin-right: 25px"> -- </span>  Dashboard</small></a>                                    
+                        </div>
+                        <div class="card-body">
+                          <a class="text-decoration-none text-dark" href="#"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Calendar</small></a>                                    
+                        </div>
+                        <div class="card-body">
+                          <a class="text-decoration-none text-dark" href="#"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Inbox</small></a>                                    
+                        </div>
+                      </div>
+                    </div>
 
-</div>
+                    <div class="card">
+                      <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                            <span style="margin-right: 15px"><i class="fas fa-qrcode text-info"></i></span><span class="text-dark">  Transaction </span>
+                        </a>
+                      </div>
+                      <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                          <a class="text-decoration-none text-dark" href="#index.html"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Quotation List</small></a>                                    
+                        </div>
+                        <div class="card-body">
+                          <a class="text-decoration-none text-dark" href="#"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Tour Packages List</small></a>                                    
+                        </div>
+                        <div class="card-body">
+                          <a class="text-decoration-none text-dark" href="#"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Reimbursement</small></a>                                    
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card">
+                      <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                            <span style="margin-right: 15px"><i class="far fa-folder text-info"></i></span><span class="text-dark">  Reports </span>
+                        </a>
+                      </div>
+                      <div id="collapseThree" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                          <a class="text-decoration-none text-dark" href="#index.html"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Packages Report</small></a>                                    
+                        </div>
+                        <div class="card-body">
+                          <a class="text-decoration-none text-dark" href="#"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Invoice Report</small></a>                                    
+                        </div>
+                        <div class="card-body">
+                          <a class="text-decoration-none text-dark" href="#"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Revenue Report</small></a>                                    
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                          <a class="collapsed card-link" data-toggle="collapse" href="#collapseFour">
+                              <span style="margin-right: 15px"><i class="fas fa-globe text-info"></i></span><span class="text-dark">  Master Data </span>
+                          </a>
+                        </div>
+                        <div id="collapseFour" class="collapse" data-parent="#accordion">
+                          <div class="card-body">
+                          <a class="text-decoration-none text-dark" href="#index.html"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Packages</small></a>                                    
+                          </div>
+                          <div class="card-body">
+                            <a class="text-decoration-none text-dark" href="#"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Destination</small></a>                                    
+                          </div>
+                          <div class="card-body">
+                            <a class="text-decoration-none text-dark" href="#"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Hotels</small></a>                                    
+                          </div>
+                          <div class="card-body">
+                            <a class="text-decoration-none text-dark" href="#"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Restaurant</small></a>                                    
+                          </div>
+                          <div class="card-body">
+                            <a class="text-decoration-none text-dark" href="#"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Vehicle</small></a>                                    
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-10">
+                <h5><a href="#" class="btn btn-xs btn-link btn-toggle-fullwidth"><i class="fa fa-arrow-left fa-sm"></i></a> Dashboard</h5>
+                <ul class="breadcrumb" style="background-color: #F4F7F6;">
+                    <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home fa-sm"></i></a></li>                            
+                    <li class="breadcrumb-item active">Dashboard</li>
+                </ul>
+
+                <!-- Card Pengumuman -->
+                <div class="row clearfix">
+                    <div class="col-sm-3">
+                        <div class="card text-center bg-info text-white">
+                            <div class="card-body">
+                              <h1>100</h1>
+                              <span>Packages Request</span>
+                            </div>                  
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card text-center bg-secondary text-white">
+                            <div class="card-body">
+                                <h1>20</h1>
+                                <span>Active Packages</span>
+                            </div>                  
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card text-center bg-warning text-white">
+                            <div class="card-body">
+                                <h1>5</h1>
+                                <span>Open Invoices</span>
+                            </div>                  
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card text-center bg-dark  text-white">
+                            <div class="card-body">
+                                <h1>1.025</h1>
+                                <span>Traveller</span>
+                            </div>                  
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="header">
+                            <h6>Active Packages<button style="float:right; font-size: 20px;" class="fa fa-plus-circle bg-white text-secondary btn btn-clear"></button></h6>
+                        </div>
+                    </div>
+                    <div class="card-body" style="width: 350px; cursor: move;">
+                          <ul class="list-group">
+                            <li class="list-group-item texthover">#L1008</li>
+                            <li class="list-group-item">
+                                <p class="card-text"><h5>Surabaya 2D1N</h5></p>
+                                <p>Family Trip Without Guide</p>
+                            <hr>
+                            <span><button type="button" title="Edit" class="card-link buttonhover"><i class="fa fa-edit"></i></button></span>
+                            <span><button type="button" title="Time" class="card-link buttonhover"><i class="far fa-clock"></i></button></span>
+                            <span><button type="button" title="Comment" class="card-link buttonhover"><i class="far fa-comments"></i></button></span>                               
+                            </li>  
+                          </ul>
+                      </div>                        
+                </div>
+                
+                <br>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="header">
+                            <h6>Requested Packages<button style="float:right; font-size: 20px;" class="fa fa-plus-circle bg-white btn btn-clear"></button></h6>
+                        </div>
+                    </div>
+                    <div class="card-body" style="width: 350px; cursor: move;">
+                          <ul class="list-group">
+                            <li class="list-group-item texthover">#L1008</li>
+                            <li class="list-group-item">
+                                <p class="card-text"><h5>Surabaya 2D1N</h5></p>
+                                <p>Family Trip Without Guide</p>
+                            <hr>
+                            <span><button type="button" title="Edit" class="card-link buttonhover"><i class="fa fa-edit"></i></button></span>
+                            <span><button type="button" title="Time" class="card-link buttonhover"><i class="far fa-clock"></i></button></span>
+                            <span><button type="button" title="Comment" class="card-link buttonhover"><i class="far fa-comments"></i></button></span>                               
+                            </li>  
+                          </ul>
+                      </div>                        
+                </div>
+                <br>
+
+            </div>  <!-- penutup div col-sm-10 -->
+        </div>  <!-- tutup Row -->
+      </div>  <!-- Tutup Container -->
+      
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
