@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<title>:: CAKI :: Reports</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="description" content="CAKI beta Design 1.0.0">
+<meta name="author" content="CAKI, Caki Indonesia">
+
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> 
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> <!-- fontawesome -->
+    
+    <link rel="stylesheet" href="https://www.cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+
+    <!-- datatables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.6/css/buttons.dataTables.min.css">
+
+    <!-- manual js -->
+    <script src="assets/js/reportmorris.js"></script>
+
+
+    <!-- Manual Css -->
+    <link rel="stylesheet" href="assets/css/manual.css">
+    <title>Final-project</title>
+  </head>
+  <body>
+    <!-- Overlay For Navbar -->
+
+    <nav class="navbar navbar-expand-sm bg-white">
+        <div class="container-fluid">
+            <!-- Brand/logo -->
+              <div class="col-sm-2">
+                <a class="navbar-brand" href="index.html">
+                  <img src="images/logo.svg" alt="CAKI LOGO" style="width:75px;">
+                </a>
+              </div>
+
+              <div class="col-sm-8">
+                <form class="form-inline" action="#/action_page.php">
+                  <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                  <button class="btn btn-light" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+              </div>
+
+              <div class="col-sm-2">
+                  <ul class="nav navbar-nav">
+                      <li>
+                          <a href=""><i class='far fa-calendar-alt' style="font-size:17px; color:rgb(131, 131, 131); margin-right: 25px"></i></a>
+                      </li>  
+                      <li>
+                          <a href=""><i class='far fa-envelope' style='font-size:17px; color:rgb(131, 131, 131); margin-right: 25px'></i></a>
+                      </li>
+                      <li>
+                          <a href=""><i class='far fa-bell' style='font-size:17px; color:rgb(131, 131, 131); margin-right: 25px'></i></a>
+                      </li>
+                      <li>
+                          <a href="login.html"><i class='fas fa-sign-in-alt' style='font-size:17px; color:rgb(131, 131, 131); margin-right: 25px'></i></a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+    </nav>
+        
+    <!-- profil user -->
+    <div class="container-fluid" style="margin-top:15px">
+        <div class="row">
+            <div class="col-sm-2">
+              <img src="images/user.png" class="rounded-circle" alt="Cinque Terre" width="48" height="48">
+              <div class="dropdown">
+                  <span>Welcome,</span>
+                  <br>
+                  <a class="dropdown-toggle user-name" data-toggle="dropdown"><strong style="color: rgb(80, 80, 80)">Sohui Park</strong></a>
+                  <div class="dropdown-menu" style="background-color: rgb(22, 22, 22)">
+                    <a class="dropdown-item" style="color: rgb(173, 173, 173)" href="#"><i class="far fa-envelope"></i> Messages</a>
+                    <a class="dropdown-item" style="color: rgb(173, 173, 173)" href="#"><i class="fas fa-cog"></i> Settings</a>
+                    <div class="dropdown-divider" style="margin-left: 15px; margin-right: 15px;"></div>
+                    <a class="dropdown-item" style="color: rgb(173, 173, 173)" href="#"><i class="fas fa-power-off"></i> Logout</a>
+                  </div>
+              </div> 
+              
+              <div class="dropdown-divider"></div>
+              <!-- nav tabs Sidebar-->
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a style="background-color: #F4F7F6;" class="nav-link active text-info font-weight-bolder" href="#menu">MENU</a>
+                      </li>
+                </ul>
+
+                <div id="accordion">
+                  <div class="card">
+                    <div class="card-header">
+                      <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                        <span style="margin-right: 15px"><i class="fas fa-home text-info"></i></span><span class="text-dark">  Home </span>
+                      </a>
+                    </div>
+                    <div id="collapseOne" class="collapse" data-parent="#accordion">
+                      <div class="card-body">
+                        <a class="text-decoration-none text-dark" href="index.html"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Dashboard</small></a>                                    
+                      </div>
+                      <div class="card-body">
+                        <a class="text-decoration-none text-dark" href="calendar.html"><small class="font-weight-bold"><span style="margin-right: 25px"> -- </span>  Calendar</small></a>                                    
+                      </div>
+                      <div class="card-body">
+                        <a class="text-decoration-none text-dark" href="inbox.html"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Inbox</small></a>                                    
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header">
+                      <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                          <span style="margin-right: 15px"><i class="fas fa-qrcode text-info"></i></span><span class="text-dark">  Transaction </span>
+                      </a>
+                    </div>
+                    <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                      <div class="card-body">
+                        <a class="text-decoration-none text-dark" href="transaksiquotation.html"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Quotation List</small></a>                                    
+                      </div>
+                      <div class="card-body">
+                        <a class="text-decoration-none text-dark" href="transaksipackages.html"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Tour Packages List</small></a>                                    
+                      </div>
+                      <div class="card-body">
+                        <a class="text-decoration-none text-dark" href="transaksireimbursement.html"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Reimbursement</small></a>                                    
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header">
+                      <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                          <span style="margin-right: 15px"><i class="far fa-folder text-info"></i></span><span class="text-dark">  Reports </span>
+                      </a>
+                    </div>
+                    <div id="collapseThree" class="collapse show" data-parent="#accordion">
+                      <div class="card-body">
+                        <a class="text-decoration-none text-dark" href="reportpackages.html"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Packages Report</small></a>                                    
+                      </div>
+                      <div class="card-body">
+                        <a class="text-decoration-none text-dark" href="reportinvoice.html"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Invoice Report</small></a>                                    
+                      </div>
+                      <div class="card-body">
+                        <a class="text-decoration-none text-dark" href="reportrevenue.html"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Revenue Report</small></a>                                    
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="card">
+                      <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseFour">
+                            <span style="margin-right: 15px"><i class="fas fa-globe text-info"></i></span><span class="text-dark">  Master Data </span>
+                        </a>
+                      </div>
+                      <div id="collapseFour" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                        <a class="text-decoration-none text-dark" href="masterpackages.html"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Packages</small></a>                                    
+                        </div>
+                        <div class="card-body">
+                          <a class="text-decoration-none text-dark" href="masterdestination.html"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Destination</small></a>                                    
+                        </div>
+                        <div class="card-body">
+                          <a class="text-decoration-none text-dark" href="masterhotels.html"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Hotels</small></a>                                    
+                        </div>
+                        <div class="card-body">
+                          <a class="text-decoration-none text-dark" href="masterrestaurant.html"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Restaurant</small></a>                                    
+                        </div>
+                        <div class="card-body">
+                          <a class="text-decoration-none text-dark" href="mastervehicle.html"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Vehicle</small></a>                                    
+                        </div>
+                      </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-sm-10">
+                <h5><a href="#" class="btn btn-xs btn-link btn-toggle-fullwidth"><i class="fa fa-arrow-left fa-sm"></i></a>Report Invoice</h5>
+                <ul class="breadcrumb" style="background-color: #F4F7F6;">
+                    <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home fa-sm"></i></a></li>                            
+                    <li class="breadcrumb-item active">Report Invoice</li>
+                </ul>
+                <div class="card">
+                  <div class="card-body">
+                    <form action="/action_page.php">
+                      <input class="col-md-11" type="text" placeholder="Name Packages... or blank for all data">
+                      <button class="btn btn-primary btn-sm" type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+                  </div>
+                </div>
+                <br>
+                           
+                <div class="card col-sm-12">
+                  <div class="header">
+                    <br>
+                      <h6>Result</h6>
+                  </div>
+                  <div class="col-md-12">
+                    <div id="area-chart"></div>
+                  </div>
+                </div>
+                <br>
+
+                <div class="card col-sm-12">
+                  <br>
+                    <div class="body">
+                        <div class="table-responsive">
+                            <table id="tabel-data" class="table table-bordered table-striped table-hover dataTable js-exportable">
+                                <thead>
+                                    <tr>
+                                        <th>PIC</th>
+                                        <th>Packages Name</th>
+                                        <th>City</th>
+                                        <th>PAX</th>
+                                        <th>Date</th>
+                                        <th>Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Tiger Nixon</td>
+                                        <td>Mountain Trip</td>
+                                        <td>Surabaya</td>
+                                        <td>61</td>
+                                        <td>2011/04/25</td>
+                                        <td>$320,800</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Garrett Winters</td>
+                                        <td>Mangrove Trail</td>
+                                        <td>Yogyakarta</td>
+                                        <td>63</td>
+                                        <td>2011/07/25</td>
+                                        <td>$170,750</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ashton Cox</td>
+                                        <td>Ecotourism Trip</td>
+                                        <td>Malang</td>
+                                        <td>66</td>
+                                        <td>2009/01/12</td>
+                                        <td>$86,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cedric Kelly</td>
+                                        <td>Bunaken Trip</td>
+                                        <td>Surabaya</td>
+                                        <td>22</td>
+                                        <td>2012/03/29</td>
+                                        <td>$433,060</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Airi Satou</td>
+                                        <td>Mangrove Trail</td>
+                                        <td>Yogyakarta</td>
+                                        <td>33</td>
+                                        <td>2008/11/28</td>
+                                        <td>$162,700</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Brielle Williamson</td>
+                                        <td>Health Tourism</td>
+                                        <td>Pasuruan</td>
+                                        <td>61</td>
+                                        <td>2012/12/02</td>
+                                        <td>$372,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Herrod Chandler</td>
+                                        <td>Diving Trip</td>
+                                        <td>Malang</td>
+                                        <td>59</td>
+                                        <td>2012/08/06</td>
+                                        <td>$137,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rhona Davidson</td>
+                                        <td>Health Tourism</td>
+                                        <td>Yogyakarta</td>
+                                        <td>55</td>
+                                        <td>2010/10/14</td>
+                                        <td>$327,900</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Colleen Hurst</td>
+                                        <td>Jungle Trip</td>
+                                        <td>Malang</td>
+                                        <td>39</td>
+                                        <td>2009/09/15</td>
+                                        <td>$205,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sonya Frost</td>
+                                        <td>City Tour</td>
+                                        <td>Surabaya</td>
+                                        <td>23</td>
+                                        <td>2008/12/13</td>
+                                        <td>$103,600</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jena Gaines</td>
+                                        <td>Forest Bathing</td>
+                                        <td>Surabaya</td>
+                                        <td>30</td>
+                                        <td>2008/12/19</td>
+                                        <td>$90,560</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Quinn Flynn</td>
+                                        <td>Cycling Trip</td>
+                                        <td>Surabaya</td>
+                                        <td>22</td>
+                                        <td>2013/03/03</td>
+                                        <td>$342,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Charde Marshall</td>
+                                        <td>Hiking</td>
+                                        <td>Malang</td>
+                                        <td>36</td>
+                                        <td>2008/10/16</td>
+                                        <td>$470,600</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Haley Kennedy</td>
+                                        <td>Mountain Tracking</td>
+                                        <td>Surabaya</td>
+                                        <td>43</td>
+                                        <td>2012/12/18</td>
+                                        <td>$313,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tatyana Fitzpatrick</td>
+                                        <td>Hiking</td>
+                                        <td>Surabaya</td>
+                                        <td>19</td>
+                                        <td>2010/03/17</td>
+                                        <td>$385,750</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Michael Silva</td>
+                                        <td>Bromo Trip</td>
+                                        <td>Surabaya</td>
+                                        <td>66</td>
+                                        <td>2012/11/27</td>
+                                        <td>$198,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Paul Byrd</td>
+                                        <td>Beach Trip</td>
+                                        <td>Pasuruan</td>
+                                        <td>64</td>
+                                        <td>2010/06/09</td>
+                                        <td>$725,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gloria Little</td>
+                                        <td>Health Tourism</td>
+                                        <td>Pasuruan</td>
+                                        <td>59</td>
+                                        <td>2009/04/10</td>
+                                        <td>$237,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bradley Greer</td>
+                                        <td>City Tour</td>
+                                        <td>Surabaya</td>
+                                        <td>41</td>
+                                        <td>2012/10/13</td>
+                                        <td>$132,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dai Rios</td>
+                                        <td>Medan Trip</td>
+                                        <td>Surabaya</td>
+                                        <td>35</td>
+                                        <td>2012/09/26</td>
+                                        <td>$217,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jenette Caldwell</td>
+                                        <td>Bunaken Trip</td>
+                                        <td>Pasuruan</td>
+                                        <td>30</td>
+                                        <td>2011/09/03</td>
+                                        <td>$345,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Yuri Berry</td>
+                                        <td>Health Tourism</td>
+                                        <td>Pasuruan</td>
+                                        <td>40</td>
+                                        <td>2009/06/25</td>
+                                        <td>$675,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Caesar Vance</td>
+                                        <td>Mountain Trip</td>
+                                        <td>Pasuruan</td>
+                                        <td>21</td>
+                                        <td>2011/12/12</td>
+                                        <td>$106,450</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Doris Wilder</td>
+                                        <td>Diving Trip</td>
+                                        <td>Medan</td>
+                                        <td>23</td>
+                                        <td>2010/09/20</td>
+                                        <td>$85,600</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Angelica Ramos</td>
+                                        <td>Mountain Trip</td>
+                                        <td>Surabaya</td>
+                                        <td>47</td>
+                                        <td>2009/10/09</td>
+                                        <td>$1,200,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gavin Joyce</td>
+                                        <td>Cycling Trip</td>
+                                        <td>Surabaya</td>
+                                        <td>42</td>
+                                        <td>2010/12/22</td>
+                                        <td>$92,575</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jennifer Chang</td>
+                                        <td>Hiking</td>
+                                        <td>Semarang</td>
+                                        <td>28</td>
+                                        <td>2010/11/14</td>
+                                        <td>$357,650</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Brenden Wagner</td>
+                                        <td>City Tour</td>
+                                        <td>Malang</td>
+                                        <td>28</td>
+                                        <td>2011/06/07</td>
+                                        <td>$206,850</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Fiona Green</td>
+                                        <td>Cycling Trip</td>
+                                        <td>Malang</td>
+                                        <td>48</td>
+                                        <td>2010/03/11</td>
+                                        <td>$850,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Shou Itou</td>
+                                        <td>Ecotourism Trip</td>
+                                        <td>Yogyakarta</td>
+                                        <td>20</td>
+                                        <td>2011/08/14</td>
+                                        <td>$163,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Michelle House</td>
+                                        <td>Health Tourism</td>
+                                        <td>Medan</td>
+                                        <td>37</td>
+                                        <td>2011/06/02</td>
+                                        <td>$95,400</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Suki Burks</td>
+                                        <td>Cycling Trip</td>
+                                        <td>Surabaya</td>
+                                        <td>53</td>
+                                        <td>2009/10/22</td>
+                                        <td>$114,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Prescott Bartlett</td>
+                                        <td>City Tour</td>
+                                        <td>Surabaya</td>
+                                        <td>27</td>
+                                        <td>2011/05/07</td>
+                                        <td>$145,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gavin Cortez</td>
+                                        <td>City Tour</td>
+                                        <td>Malang</td>
+                                        <td>22</td>
+                                        <td>2008/10/26</td>
+                                        <td>$235,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Martena Mccray</td>
+                                        <td>City Tour</td>
+                                        <td>Surabaya</td>
+                                        <td>46</td>
+                                        <td>2011/03/09</td>
+                                        <td>$324,050</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Unity Butler</td>
+                                        <td>Bromo Trip</td>
+                                        <td>Malang</td>
+                                        <td>47</td>
+                                        <td>2009/12/09</td>
+                                        <td>$85,675</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Howard Hatfield</td>
+                                        <td>Forest Bathing</td>
+                                        <td>Malang</td>
+                                        <td>51</td>
+                                        <td>2008/12/16</td>
+                                        <td>$164,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hope Fuentes</td>
+                                        <td>City Tour</td>
+                                        <td>Malang</td>
+                                        <td>41</td>
+                                        <td>2010/02/12</td>
+                                        <td>$109,850</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Vivian Harrell</td>
+                                        <td>City Tour</td>
+                                        <td>Malang</td>
+                                        <td>62</td>
+                                        <td>2009/02/14</td>
+                                        <td>$452,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Timothy Mooney</td>
+                                        <td>Forest Bathing</td>
+                                        <td>Surabaya</td>
+                                        <td>37</td>
+                                        <td>2008/12/11</td>
+                                        <td>$136,200</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jackson Bradshaw</td>
+                                        <td>City Tour</td>
+                                        <td>Pasuruan</td>
+                                        <td>65</td>
+                                        <td>2008/09/26</td>
+                                        <td>$645,750</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Olivia Liang</td>
+                                        <td>City Tour</td>
+                                        <td>Semarang</td>
+                                        <td>64</td>
+                                        <td>2011/02/03</td>
+                                        <td>$234,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bruno Nash</td>
+                                        <td>City Tour</td>
+                                        <td>Surabaya</td>
+                                        <td>38</td>
+                                        <td>2011/05/03</td>
+                                        <td>$163,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sakura Yamamoto</td>
+                                        <td>City Tour</td>
+                                        <td>Yogyakarta</td>
+                                        <td>37</td>
+                                        <td>2009/08/19</td>
+                                        <td>$139,575</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Thor Walton</td>
+                                        <td>Cycling Trip</td>
+                                        <td>Pasuruan</td>
+                                        <td>61</td>
+                                        <td>2013/08/11</td>
+                                        <td>$98,540</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Finn Camacho</td>
+                                        <td>City Tour</td>
+                                        <td>Malang</td>
+                                        <td>47</td>
+                                        <td>2009/07/07</td>
+                                        <td>$87,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Serge Baldwin</td>
+                                        <td>City Tour</td>
+                                        <td>Semarang</td>
+                                        <td>64</td>
+                                        <td>2012/04/09</td>
+                                        <td>$138,575</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Zenaida Frank</td>
+                                        <td>City Tour</td>
+                                        <td>Pasuruan</td>
+                                        <td>63</td>
+                                        <td>2010/01/04</td>
+                                        <td>$125,250</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Zorita Serrano</td>
+                                        <td>City Tour</td>
+                                        <td>Malang</td>
+                                        <td>56</td>
+                                        <td>2012/06/01</td>
+                                        <td>$115,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jennifer Acosta</td>
+                                        <td>Jungle Trip</td>
+                                        <td>Surabaya</td>
+                                        <td>43</td>
+                                        <td>2013/02/01</td>
+                                        <td>$75,650</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cara Stevens</td>
+                                        <td>Diving Trip</td>
+                                        <td>Pasuruan</td>
+                                        <td>46</td>
+                                        <td>2011/12/06</td>
+                                        <td>$145,600</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hermione Butler</td>
+                                        <td>Hiking</td>
+                                        <td>Surabaya</td>
+                                        <td>47</td>
+                                        <td>2011/03/21</td>
+                                        <td>$356,250</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lael Greer</td>
+                                        <td>Health Tourism</td>
+                                        <td>Surabaya</td>
+                                        <td>21</td>
+                                        <td>2009/02/27</td>
+                                        <td>$103,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jonas Alexander</td>
+                                        <td>Cycling Trip</td>
+                                        <td>Malang</td>
+                                        <td>30</td>
+                                        <td>2010/07/14</td>
+                                        <td>$86,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Shad Decker</td>
+                                        <td>Hiking</td>
+                                        <td>Surabaya</td>
+                                        <td>51</td>
+                                        <td>2008/11/13</td>
+                                        <td>$183,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Michael Bruce</td>
+                                        <td>Jungle Trip</td>
+                                        <td>Semarang</td>
+                                        <td>29</td>
+                                        <td>2011/06/27</td>
+                                        <td>$183,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Donna Snider</td>
+                                        <td>Hiking</td>
+                                        <td>Pasuruan</td>
+                                        <td>27</td>
+                                        <td>2011/01/25</td>
+                                        <td>$112,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <script type="text/javascript"> 
+                              $(document).ready(function () {
+                                  $('#tabel-data').DataTable({
+                                    dom: 'Bfrtip',
+                                    buttons: ['copy', 'csv', 'print']
+                                  });
+                              });
+                            </script>                           
+                            </div>
+                        </div>
+                        <br>
+                </div>
+                <br>
+
+            </div>  <!-- penutup div col-sm-10 -->
+        </div>  <!-- tutup Row -->
+      </div>  <!-- Tutup Container -->
+      
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.flash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.print.min.js"></script>
+  </body>
+</html>

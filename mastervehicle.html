@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<title>:: CAKI :: Home</title>
+<title>:: CAKI :: Master Data</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -89,7 +89,7 @@
                         <span style="margin-right: 15px"><i class="fas fa-home text-info"></i></span><span class="text-dark">  Home </span>
                       </a>
                     </div>
-                    <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                    <div id="collapseOne" class="collapse" data-parent="#accordion">
                       <div class="card-body">
                         <a class="text-decoration-none text-dark" href="index.html"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Dashboard</small></a>                                    
                       </div>
@@ -146,7 +146,7 @@
                             <span style="margin-right: 15px"><i class="fas fa-globe text-info"></i></span><span class="text-dark">  Master Data </span>
                         </a>
                       </div>
-                      <div id="collapseFour" class="collapse" data-parent="#accordion">
+                      <div id="collapseFour" class="collapse show" data-parent="#accordion">
                         <div class="card-body">
                         <a class="text-decoration-none text-dark" href="masterpackages.html"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Packages</small></a>                                    
                         </div>
@@ -168,89 +168,100 @@
             </div>
 
             <div class="col-sm-10">
-                <h5><a href="#" class="btn btn-xs btn-link btn-toggle-fullwidth"><i class="fa fa-arrow-left fa-sm"></i></a> Dashboard</h5>
+                <h5><a href="#" class="btn btn-xs btn-link btn-toggle-fullwidth"><i class="fa fa-arrow-left fa-sm"></i></a> Master Vehicle</h5>
                 <ul class="breadcrumb" style="background-color: #F4F7F6;">
                     <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home fa-sm"></i></a></li>                            
-                    <li class="breadcrumb-item active">Dashboard</li>
+                    <li class="breadcrumb-item active">Mater Vehicle</li>
                 </ul>
-
-                <!-- Card Pengumuman -->
-                <div class="row clearfix">
-                    <div class="col-sm-3">
-                        <div class="card text-center bg-info text-white">
-                            <div class="card-body">
-                              <h1>100</h1>
-                              <span>Packages Request</span>
-                            </div>                  
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="card text-center bg-secondary text-white">
-                            <div class="card-body">
-                                <h1>20</h1>
-                                <span>Active Packages</span>
-                            </div>                  
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="card text-center bg-warning text-white">
-                            <div class="card-body">
-                                <h1>5</h1>
-                                <span>Open Invoices</span>
-                            </div>                  
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="card text-center bg-dark  text-white">
-                            <div class="card-body">
-                                <h1>1.025</h1>
-                                <span>Traveller</span>
-                            </div>                  
-                        </div>
-                    </div>
+                <div class="card">
+                    <div class="card-body">
+                        <button type="button" class="btn btn-primary btn-sm">Add New Vehicle</button>  
+                    </div>  
                 </div>
                 <br>
                 <div class="card">
                     <div class="card-body">
                         <div class="header">
-                            <h5>Active Packages<button style="float:right; font-size: 20px;" class="fa fa-plus-circle bg-white text-secondary btn btn-clear"></button></h5>
+                            <div class="form-group" >
+                                <form action="/action_page.php">
+                                    <input class="col-md-11" type="text" placeholder="Name vehicle">
+                                    <button class="btn btn-primary btn-sm" type="submit"><i class="fas fa-search"></i></button>
+                                </form>
+                            </div>
                         </div>
+                        <br>
+                        <div class="body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>PO ID</th>
+                                        <th>PO Name</th>
+                                        <th>PO Location</th>
+                                        <th>PO PIC Name</th>
+                                        <th>PO PIC Contact</th>
+                                        <th>Status</th>
+                                        <th></th>
+                                        <th></th>
+                                        
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>POINA10000005</td>
+                                        <td>PO Budi Sentosa</td>
+                                        <td>Indonesia, Surabaya</td>
+                                        <td>Budi</td>
+                                        <td>budi@gmail.com,+6281230421</td>
+                                        <td><label class="badge badge-success">Active</label></td>
+                                        <td><button class="btn btn-secondary btn-sm"><i class="far fa-edit"></i></button>
+                                            <button class="btn btn-secondary btn-sm"><i class="far fa-envelope"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>POINA10000205</td>
+                                        <td>PO Jaya ABADI</td>
+                                        <td>Indonesia, Surabaya</td>
+                                        <td>Joko</td>
+                                        <td>joko@gmail.com,+62812320421</td>
+                                        <td><label class="badge badge-success">Active</label></td>
+                                        <td><button class="btn btn-secondary btn-sm"><i class="far fa-edit"></i></button>
+                                            <button class="btn btn-secondary btn-sm"><i class="far fa-envelope"></i></button></td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td>POINA20005005</td>
+                                        <td>PO Selamat Sentosa</td>
+                                        <td>Indonesia, Yogyakarta</td>
+                                        <td>Santoso</td>
+                                        <td>santoso@gmail.com,+628123421</td>
+                                        <td><label class="badge badge-success">Active</label></td>
+                                        <td><button class="btn btn-secondary btn-sm"><i class="far fa-edit"></i></button>
+                                            <button class="btn btn-secondary btn-sm"><i class="far fa-envelope"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>POINA30000025</td>
+                                        <td>PO Leres</td>
+                                        <td>Indonesia, Jakarta</td>
+                                        <td>Susilo</td>
+                                        <td>susilo@gmail.com,+62812564821</td>
+                                        <td><label class="badge badge-success">Active</label></td>
+                                        <td><button class="btn btn-secondary btn-sm"><i class="far fa-edit"></i></button>
+                                            <button class="btn btn-secondary btn-sm"><i class="far fa-envelope"></i></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>POINA10000055</td>
+                                        <td>PO Senantiasa</td>
+                                        <td>Indonesia, Surabaya</td>
+                                        <td>Tuti</td>
+                                        <td>tuti@gmail.com,+62818794a21</td>
+                                        <td><label class="badge badge-success">Active</label></td>
+                                        <td><button class="btn btn-secondary btn-sm"><i class="far fa-edit"></i></button>
+                                            <button class="btn btn-secondary btn-sm"><i class="far fa-envelope"></i></button></td>
+                                        
+                                    </tr>
+                                    </tbody>
+                            </table>
+                        </div> 
                     </div>
-                    <div class="card-body" style="width: 350px; cursor: move;">
-                          <ul class="list-group">
-                            <li class="list-group-item texthover">#L1008</li>
-                            <li class="list-group-item">
-                                <p class="card-text"><h5>Surabaya 2D1N</h5></p>
-                                <p>Family Trip Without Guide</p>
-                            <hr>
-                            <span><button type="button" title="Edit" class="card-link buttonhover"><i class="fa fa-edit"></i></button></span>
-                            <span><button type="button" title="Time" class="card-link buttonhover"><i class="far fa-clock"></i></button></span>
-                            <span><button type="button" title="Comment" class="card-link buttonhover"><i class="far fa-comments"></i></button></span>                               
-                            </li>  
-                          </ul>
-                      </div>                        
-                </div>
-                
-                <br>
-                <div class="card">
-                    <div class="card-body">
-                        <div class="header">
-                          <h5>Requested Packages<button style="float:right; font-size: 20px;" class="fa fa-plus-circle bg-white text-secondary btn btn-clear"></button></h5>
-                        </div>
-                    </div>
-                    <div class="card-body" style="width: 350px; cursor: move;">
-                          <ul class="list-group">
-                            <li class="list-group-item texthover">#L1008</li>
-                            <li class="list-group-item">
-                                <p class="card-text"><h5>Surabaya 2D1N</h5></p>
-                                <p>Family Trip Without Guide</p>
-                            <hr>
-                            <span><button type="button" title="Edit" class="card-link buttonhover"><i class="fa fa-edit"></i></button></span>
-                            <span><button type="button" title="Time" class="card-link buttonhover"><i class="far fa-clock"></i></button></span>
-                            <span><button type="button" title="Comment" class="card-link buttonhover"><i class="far fa-comments"></i></button></span>                               
-                            </li>  
-                          </ul>
-                      </div>                        
                 </div>
                 <br>
 

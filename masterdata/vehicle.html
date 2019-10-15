@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<title>:: CAKI :: Home</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="description" content="CAKI beta Design 1.0.0">
+<meta name="author" content="CAKI, Caki Indonesia">
+
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- fontawesome -->
+
+    <!-- Manual Css -->
+    <link rel="stylesheet" href="assets/css/manual.css">
+    <title>Final-project</title>
+  </head>
+  <body>
+    <!-- Overlay For Navbar -->
+
+    <nav class="navbar navbar-expand-sm bg-white">
+        <div class="container-fluid">
+            <!-- Brand/logo -->
+              <div class="col-sm-2">
+                <a class="navbar-brand" href="index.html">
+                  <img src="images/logo.svg" alt="CAKI LOGO" style="width:75px;">
+                </a>
+              </div>
+
+              <div class="col-sm-8">
+                <form class="form-inline" action="#/action_page.php">
+                  <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                  <button class="btn btn-light" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+              </div>
+
+              <div class="col-sm-2">
+                  <ul class="nav navbar-nav">
+                      <li>
+                          <a href=""><i class='far fa-calendar-alt' style="font-size:17px; color:rgb(131, 131, 131); margin-right: 25px"></i></a>
+                      </li>  
+                      <li>
+                          <a href=""><i class='far fa-envelope' style='font-size:17px; color:rgb(131, 131, 131); margin-right: 25px'></i></a>
+                      </li>
+                      <li>
+                          <a href=""><i class='far fa-bell' style='font-size:17px; color:rgb(131, 131, 131); margin-right: 25px'></i></a>
+                      </li>
+                      <li>
+                          <a href="login.html"><i class='fas fa-sign-in-alt' style='font-size:17px; color:rgb(131, 131, 131); margin-right: 25px'></i></a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+    </nav>
+        
+    <!-- profil user -->
+    <div class="container-fluid" style="margin-top:15px">
+        <div class="row">
+            <div class="col-sm-2">
+              <img src="images/user.png" class="rounded-circle" alt="Cinque Terre" width="48" height="48">
+              <div class="dropdown">
+                  <span>Welcome,</span>
+                  <br>
+                  <a class="dropdown-toggle user-name" data-toggle="dropdown"><strong style="color: rgb(80, 80, 80)">Sohui Park</strong></a>
+                  <div class="dropdown-menu" style="background-color: rgb(22, 22, 22)">
+                    <a class="dropdown-item" style="color: rgb(173, 173, 173)" href="#"><i class="far fa-envelope-open"></i> Messages</a>
+                    <a class="dropdown-item" style="color: rgb(173, 173, 173)" href="#"><i class="fas fa-cog"></i> Settings</a>
+                    <div class="dropdown-divider" style="margin-left: 15px; margin-right: 15px;"></div>
+                    <a class="dropdown-item" style="color: rgb(173, 173, 173)" href="#"><i class="fas fa-power-off"></i> Logout</a>
+                  </div>
+              </div> 
+              
+              <div class="dropdown-divider"></div>
+              <!-- nav tabs Sidebar-->
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a style="background-color: #F4F7F6;" class="nav-link active text-info font-weight-bolder" href="#menu">MENU</a>
+                      </li>
+                </ul>
+
+                <div id="accordion">
+                    <div class="card">
+                      <div class="card-header">
+                        <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                          <span style="margin-right: 15px"><i class="fas fa-home text-info"></i></span><span class="text-dark">  Home </span>
+                        </a>
+                      </div>
+                      <div id="collapseOne" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                          <a class="text-decoration-none text-dark" href="index.html"><small class="font-weight-bold"><span style="margin-right: 25px"> -- </span>  Dashboard</small></a>                                    
+                        </div>
+                        <div class="card-body">
+                          <a class="text-decoration-none text-dark" href="calendar.html"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Calendar</small></a>                                    
+                        </div>
+                        <div class="card-body">
+                          <a class="text-decoration-none text-dark" href="inbox.html"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Inbox</small></a>                                    
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card">
+                      <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                            <span style="margin-right: 15px"><i class="fas fa-qrcode text-info"></i></span><span class="text-dark">  Transaction </span>
+                        </a>
+                      </div>
+                      <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                          <a class="text-decoration-none text-dark" href="quotation-List.html"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Quotation List</small></a>                                    
+                        </div>
+                        <div class="card-body">
+                          <a class="text-decoration-none text-dark" href="tour-Packages.html"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Tour Packages List</small></a>                                    
+                        </div>
+                        <div class="card-body">
+                          <a class="text-decoration-none text-dark" href="Reimbursement.html"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Reimbursement</small></a>                                    
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card">
+                      <div class="card-header">
+                        <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                            <span style="margin-right: 15px"><i class="far fa-folder text-info"></i></span><span class="text-dark">  Reports </span>
+                        </a>
+                      </div>
+                      <div id="collapseThree" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                          <a class="text-decoration-none text-dark" href="packages-Report.html"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Packages Report</small></a>                                    
+                        </div>
+                        <div class="card-body">
+                          <a class="text-decoration-none text-dark" href="invoice-Report.html"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Invoice Report</small></a>                                    
+                        </div>
+                        <div class="card-body">
+                          <a class="text-decoration-none text-dark" href="revenue-Report.html"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Revenue Report</small></a>                                    
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                          <a class="collapsed card-link" data-toggle="collapse" href="#collapseFour">
+                              <span style="margin-right: 15px"><i class="fas fa-globe text-info"></i></span><span class="text-dark">  Master Data </span>
+                          </a>
+                        </div>
+                        <div id="collapseFour" class="collapse show" data-parent="#accordion">
+                          <div class="card-body">
+                          <a class="text-decoration-none text-dark" href="packages.html"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Packages</small></a>                                    
+                          </div>
+                          <div class="card-body">
+                            <a class="text-decoration-none text-dark" href="destination.html"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Destination</small></a>                                    
+                          </div>
+                          <div class="card-body">
+                            <a class="text-decoration-none text-dark" href="hotels.html"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Hotels</small></a>                                    
+                          </div>
+                          <div class="card-body">
+                            <a class="text-decoration-none text-dark" href="restaurant.html"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Restaurant</small></a>                                    
+                          </div>
+                          <div class="card-body">
+                            <a class="text-decoration-none text-dark" href="vehicle.html"><small class="font-weight-bolder"><span style="margin-right: 25px"> -- </span>  Vehicle</small></a>                                    
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-10">
+                <h5><a href="#" class="btn btn-xs btn-link btn-toggle-fullwidth"><i class="fa fa-arrow-left fa-sm"></i></a> Packages</h5>
+                <ul class="breadcrumb" style="background-color: #F4F7F6;">
+                    <li class="breadcrumb-item"><a href="index.html"><i class="fas fa-home fa-sm"></i></a></li>                            
+                    <li class="breadcrumb-item active">Packages</li>
+                </ul>
+                <div class="card">
+                    <div class="card-body">
+                        <button type="button" class="btn btn-primary btn-sm">Add New Packages</button>  
+                    </div>  
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="header">
+                            <div class="form-group" >
+                                <form action="/action_page.php">
+                                    <input class="col-md-11" type="text" placeholder="Name packages">
+                                    <button class="btn btn-primary btn-sm" type="submit"><i class="fas fa-search"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Packages Number</th>
+                                        <th>Packages Name</th>
+                                        <th>Packages Type</th>
+                                        <th>Duration</th>
+                                        <th>Price</th>
+                                        <th>Status</th>
+                                        <th></th>
+                                        <th></th>
+                                        
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Q2018020102042</td>
+                                        <td>Surabaya 2D1N</td>
+                                        <td>Open Trip</td>
+                                        <td>2D1N</td>
+                                        <td>150.000</td>
+                                        <td><label class="badge badge-success">Active</label></td>
+                                        <td><button class="btn btn-secondary btn-sm"><i class="far fa-edit"></i></button>
+                                            <button class="btn btn-secondary btn-sm">Close</button></td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td>Q2018020100142</td>
+                                        <td>Jakarta 2D1N</td>
+                                        <td>Open Trip</td>
+                                        <td>2D1N</td>
+                                        <td>150.000</td>
+                                        <td><label class="badge badge-success">Active</label></td>
+                                        <td><button class="btn btn-secondary btn-sm"><i class="far fa-edit"></i></button>
+                                            <button class="btn btn-secondary btn-sm">Close</button></td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td>Q2018020100042</td>
+                                        <td>Malang 3D2N</td>
+                                        <td>Private Trip</td>
+                                        <td>3D2N</td>
+                                        <td>1.000.000</td>
+                                        <td><label class="badge badge-success">Active</label></td>
+                                        <td><button class="btn btn-secondary btn-sm"><i class="far fa-edit"></i></button>
+                                            <button class="btn btn-secondary btn-sm">Close</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Q2018052100099</td>
+                                        <td>Surabaya 2D1N</td>
+                                        <td>Private Trip</td>
+                                        <td>2D1N</td>
+                                        <td>500.000</td>
+                                        <td><label class="badge badge-success">Active</label></td>
+                                        <td><button class="btn btn-secondary btn-sm"><i class="far fa-edit"></i></button>
+                                            <button class="btn btn-secondary btn-sm">Close</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Q2018030102442</td>
+                                        <td>Surabaya 2D1N</td>
+                                        <td>Group Trip</td>
+                                        <td>2D1N</td>
+                                        <td>150.000</td>
+                                        <td><label class="badge badge-success">Active</label></td>
+                                        <td><button class="btn btn-secondary btn-sm"><i class="far fa-edit"></i></button>
+                                            <button class="btn btn-secondary btn-sm">Close</button></td>
+                                    </tr>
+                                    </tbody>
+                            </table>
+                        </div> 
+                    </div>
+                </div>
+                <br>
+
+            </div>  <!-- penutup div col-sm-10 -->
+        </div>  <!-- tutup Row -->
+      </div>  <!-- Tutup Container -->
+      
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

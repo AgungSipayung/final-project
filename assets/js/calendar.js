@@ -14,27 +14,32 @@ document.addEventListener('DOMContentLoaded', function() {
       {
         title: 'TRIP Surabaya',
         start: '2018-07-01',
-        className: 'bg-info'
+        className: 'bg-info',
+        textColor: '#FFFFFF',
         
       },
       {
           title: 'Long Trip Karimun',
           start: '2018-07-07',
           end: '2018-07-10',
-          className: 'bg-danger'
+          className: 'bg-danger',
+          textColor: '#FFFFFF'
       },
       {
           title: 'Surabaya City Tour',
           start: '2018-07-12',
           className: 'bg-dark',
+          textColor: '#FFFFFF'
       },
     ],
+    
+
     eventClick: function(arg) {
       if (confirm('delete event?')) {
         arg.event.remove()
       }
     }
   });
-
+  
   calendar.render();
 });

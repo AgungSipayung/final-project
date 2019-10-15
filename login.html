@@ -1,64 +1,107 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
+    <head>
+        <title>:: CAKI :: Login</title>
+        
+        <!-- add the responsive viewport meta tag -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, maximum-scale=1.0, user-scalable=0">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <meta name="description" content="CAKI Bootstrap beta Design 1.0.0">
+        <meta name="author" content="CAKI, Caki Indonesia">
+        
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-<head>
-<title>:: CAKI :: Login</title>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<meta name="description" content="CAKI beta Design 1.0.0">
-<meta name="author" content="CAKI, Caki Indonesia">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <!-- Fontawesome -->
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-<!-- VENDOR CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+        <style type="text/css">
+            .slide-form{
+            position: absolute;
+            width: 968px;
+            height: 768px;
+            left: 398px;
+            top: 0px;
 
-<!-- MAIN CSS -->
-<link rel="stylesheet" href="assets/css/manual.css">
-</head>
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-image: url(images/bg/bg1.jpg);
+            transition: 1.5s linear;
+            -moz-transition: 1.5s linear;
+            }
+            .caki-login{
+            position: absolute;
+            width: 398px;
+            height: 768px;
+            left: 0px;
+            top: 0px;
 
-<body class="theme-cyan">
-	<!-- WRAPPER -->
-	<div id="wrapper">
-		<div class="vertical-align-wrap">
-			<div class="vertical-align-middle auth-main">
-				<div class="auth-box">
-                    <div class="top">
-                        <img src="images/logo-border.svg"  alt="CAKI">
-                    </div>
-					<div class="card">
-                        <div class="header">
-                            <p class="lead">Login to your account</p>
+            background: #D17905;
+            }
+            .signing{
+            position: absolute;
+            width: 382px;
+            height: 399px;
+            left: 129px;
+            top: 200px;
+            padding: 24px;
+
+            background: #FFFFFF;
+            }
+
+        </style>
+        
+    </head>
+    <body>
+        
+        <div class="container-fluid">
+            <div class="slide-form"></div>
+            <div class="caki-login">
+                <div style="position: absolute; width: 108px; height: 108px; left: 135px; top: 40px;">
+                    <img src="images/logo.png" class="rounded-circle img-thumbnail" alt="Caki Logo">
+                </div>
+                <div class="signing img-thumbnail">           
+                    <p class="lead">Login to your account</p>
+                    <form action="#action_page.php" class="needs-validation" novalidate>
+                        <div class="form-group">
+                            <br>
+                            <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
-                        <div class="body">
-                            <form class="form-auth-small" action="index.html">
-                                <div class="form-group">
-                                    <label for="signin-email" class="control-label sr-only">Email</label>
-                                    <input type="email" class="form-control" id="signin-email" value="user@domain.com" placeholder="Email">
-                                </div>
-                                <div class="form-group">
-                                    <label for="signin-password" class="control-label sr-only">Password</label>
-                                    <input type="password" class="form-control" id="signin-password" value="thisisthepassword" placeholder="Password">
-                                </div>
-                                <div class="form-group clearfix">
-                                    <label class="fancy-checkbox element-left">
-                                        <input type="checkbox">
-                                        <span>Remember me</span>
-                                    </label>								
-                                </div>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">LOGIN</button>
-                                <div class="bottom">
-                                    <span class="helper-text m-b-10"><i class="fa fa-lock"></i> <a href="">Forgot password?</a></span>
-                                    <span>Don't have an account? <a href="">Register</a></span>
-                                </div>
-                            </form>
+                        <div class="form-group">
+                            <br>
+                            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out this field.</div>
                         </div>
+                        <div class="form-group form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" name="remember" required> Remember me
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    </form>
+                    <br>
+                    <div class="text-center">
+                        <a href="#lock" class="text-decoration-none"><i class="fas fa-lock" style="color:#5f5f5f"></i> Forgot password?</a>
+                        <br>
+                        <p>Don't have an account? <a href="#regist" class="text-decoration-none"> Register </a></p>
                     </div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- END WRAPPER -->
-</body>
+                </div>
+            </div>
+        </div>
+
+    </body>
 </html>
